@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cmath>
+#include <cstring>
 
 class Lemniscate_Bernoulli{
 private:
-    double c;
+    double c = 1.0;
 public:
     void set_data(double data_c){
         c = data_c;
@@ -28,6 +29,7 @@ public:
     }
 };
 
+int dialog(const char *msgs[], int);
 int D_Set_Data(Lemniscate_Bernoulli &);
 int D_Get_Data(Lemniscate_Bernoulli &);
 int D_Get_Polar_Radius_By_Angle(Lemniscate_Bernoulli &);
