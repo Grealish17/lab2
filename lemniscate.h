@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <cstring>
+#define PI 3.14159265
 
 class Lemniscate_Bernoulli{
 private:
@@ -9,22 +10,44 @@ public:
     void set_data(double data_c){
         c = data_c;
     }
-    double get_data(){
+    [[nodiscard]]
+    double get_data() const{
         return c;
     }
-    double get_polar_radius_by_angle(double& fi){
-        return sqrt(2*c*c*cos(2*fi));
+    double get_polar_radius_by_angle(double& fi) const{
+        if(cos(2*fi) > 0.0){
+            return sqrt(2*c*c*cos(2*fi));
+        }
+        else{
+            throw fi;
+        }
     }
-    double get_radius_of_curvature_by_polar_radius(double & r){
-        return 2*c*c/(3*r);
+    double get_radius_of_curvature_by_polar_radius(double & r) const{
+        if(r > 0.0){
+            return 2*c*c/(3*r);
+        }
+        else{
+            throw r;
+        };
     }
-    double get_radius_of_curvature_by_angle(double & fi){
-        return 2*c*c/(3* get_polar_radius_by_angle(fi));
+    double get_radius_of_curvature_by_angle(double & fi) const{
+        if(cos(2*fi) > 0.0){
+            return 2*c*c/(3 * get_polar_radius_by_angle(fi));
+        }
+        else{
+            throw fi;
+        }
     }
-    double get_sector_area_by_angle(double & alpha){
-        return c*c*sin(2*alpha)/2;
+    double get_sector_area_by_angle(double & alpha) const{
+        if(alpha >= 0 && alpha <= PI/4){
+            return c*c*sin(2*alpha)/2;
+        }
+        else{
+            throw alpha;
+        }
     }
-    double get_area_of_lemniscate(){
+    [[nodiscard]]
+    double get_area_of_lemniscate() const{
         return 2*c*c;
     }
 };
