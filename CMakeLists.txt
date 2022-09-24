@@ -3,4 +3,4 @@ project(lab2)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(lab2 main.cpp lemniscate.h dialog_functions.cpp)
+add_executable(lab2 main.cpp lemniscate.h dialog_functions.cpp lemniscate.cpp)

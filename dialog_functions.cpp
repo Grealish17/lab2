@@ -72,7 +72,21 @@ int D_Get_Radius_Of_Curvature_By_Angle(Lemniscate_Bernoulli& lemniscate){
     std::cin >> fi;
     try{
         double r = lemniscate.get_radius_of_curvature_by_angle(fi);
-        std::cout << "Polar radius value is: " << r << "\n";
+        std::cout << "Radius of curvature value is: " << r << "\n";
+    }
+    catch(std::invalid_argument& exception){
+        std::cout << "Lemniscate is defined for the angle [-pi/4; pi/4] U [3*pi/4; 5*pi/4]! Your angle value is: " << fi << "\n";
+    }
+    return 1;
+}
+int D_Analytically_Get_Radius_Of_Curvature_By_Angle(Lemniscate_Bernoulli& lemniscate){
+    double fi;
+    std::cout << "Enter angle value in radians: ";
+    std::cin >> fi;
+    try{
+        double d_fi = 0.0001;
+        double r = lemniscate.get_radius_of_curvature_by_angle(fi, d_fi);
+        std::cout << "Radius of curvature value is: " << r << "\n";
     }
     catch(std::invalid_argument& exception){
         std::cout << "Lemniscate is defined for the angle [-pi/4; pi/4] U [3*pi/4; 5*pi/4]! Your angle value is: " << fi << "\n";

@@ -61,6 +61,12 @@ build CMakeFiles/lab2.dir/dialog_functions.cpp.o: CXX_COMPILER__lab2_Debug /home
   OBJECT_DIR = CMakeFiles/lab2.dir
   OBJECT_FILE_DIR = CMakeFiles/lab2.dir
 
+build CMakeFiles/lab2.dir/lemniscate.cpp.o: CXX_COMPILER__lab2_Debug /home/alexandr/CLionProjects/OOP2022/lab2/lemniscate.cpp || cmake_object_order_depends_target_lab2
+  DEP_FILE = CMakeFiles/lab2.dir/lemniscate.cpp.o.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles/lab2.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab2
@@ -69,7 +75,7 @@ build CMakeFiles/lab2.dir/dialog_functions.cpp.o: CXX_COMPILER__lab2_Debug /home
 #############################################
 # Link the executable lab2
 
-build lab2: CXX_EXECUTABLE_LINKER__lab2_Debug CMakeFiles/lab2.dir/main.cpp.o CMakeFiles/lab2.dir/dialog_functions.cpp.o
+build lab2: CXX_EXECUTABLE_LINKER__lab2_Debug CMakeFiles/lab2.dir/main.cpp.o CMakeFiles/lab2.dir/dialog_functions.cpp.o CMakeFiles/lab2.dir/lemniscate.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/lab2.dir
   POST_BUILD = :
