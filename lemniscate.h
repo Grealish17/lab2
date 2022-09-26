@@ -29,15 +29,3 @@ namespace LB{
         double get_area_of_lemniscate() const;
     };
 }
-
-using namespace LB;
-
-int dialog(const char *msgs[], int);
-int D_Set_Data(Lemniscate_Bernoulli &);
-int D_Get_Data(Lemniscate_Bernoulli &);
-int D_Get_Polar_Radius_By_Angle(Lemniscate_Bernoulli &);
-int D_Get_Radius_Of_Curvature_By_Polar_Radius(Lemniscate_Bernoulli &);
-int D_Get_Radius_Of_Curvature_By_Angle(Lemniscate_Bernoulli &);
-int D_Get_Sector_Area_By_Angle(Lemniscate_Bernoulli &);
-int D_Get_Area_Of_Lemniscate(Lemniscate_Bernoulli &);
-int D_Analytically_Get_Radius_Of_Curvature_By_Angle(Lemniscate_Bernoulli &);

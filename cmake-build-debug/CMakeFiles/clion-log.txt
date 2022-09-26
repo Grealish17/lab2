@@ -1,4 +1,13 @@
 /var/lib/snapd/snap/clion/206/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/206/bin/ninja/linux/ninja -G Ninja -S /home/alexandr/CLionProjects/OOP2022/lab2 -B /home/alexandr/CLionProjects/OOP2022/lab2/cmake-build-debug
 -- Configuring done
--- Generating done
--- Build files have been written to: /home/alexandr/CLionProjects/OOP2022/lab2/cmake-build-debug
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    main.h
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: lab2
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

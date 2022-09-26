@@ -84,7 +84,7 @@ int D_Analytically_Get_Radius_Of_Curvature_By_Angle(Lemniscate_Bernoulli& lemnis
     std::cout << "Enter angle value in radians: ";
     std::cin >> fi;
     try{
-        double d_fi = 0.0001;
+        double d_fi = 1e-5;
         double r = lemniscate.get_radius_of_curvature_by_angle(fi, d_fi);
         std::cout << "Radius of curvature value is: " << r << "\n";
     }
